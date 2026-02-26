@@ -1,0 +1,19 @@
+# Core dependencies
+streamlit>=1.28.0
+Pillow>=10.0.0
+reportlab>=4.0.0
+pypdf>=4.0.0
+gspread>=5.12.0
+google-auth>=2.23.0
+
+# Optional - for QR code generation
+qrcode[pil]>=7.4.0
+
+# Optional - for signature drawing canvas
+streamlit-drawable-canvas>=0.9.3
+
+# Optional - for AI document verification
+anthropic>=0.18.0
+
+# Optional - for .env file loading
+python-dotenv>=1.0.0

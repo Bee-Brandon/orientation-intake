@@ -1,0 +1,33 @@
+# Uploaded documents (contain PII)
+uploads/
+
+# Participant data (contains PII)
+data/participants.json
+
+# Generated QR codes
+qr_codes/
+
+# Python
+__pycache__/
+*.pyc
+
+# Environment
+.env
+
+# Streamlit secrets (contains private keys)
+.streamlit/secrets.toml
+
+# Saved sessions (contains PII)
+saved_sessions/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+nul
+*.log

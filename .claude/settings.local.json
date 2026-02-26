@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(streamlit run:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(python -m py_compile:*)",
+      "Bash(ren:*)",
+      "Bash(python app.py:*)",
+      "Bash(python -m streamlit:*)",
+      "Bash(pip install:*)",
+      "Bash(python -m pip install:*)"
+    ]
+  }
+}
