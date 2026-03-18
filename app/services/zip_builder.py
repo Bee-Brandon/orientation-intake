@@ -85,8 +85,18 @@ def build_submission_zip(participant):
                     pass  # Skip county forms if templates missing or error
 
         # Add participant info as text file
-        info_content = _build_participant_info(participant)
-        zf.writestr(f"{name_prefix}_info.txt", info_content)
+info_content = _build_participant_info(participant)
+zf.writestr(f"{name_prefix}_info.txt", info_content)
+
+# Add CalJOBS entry reference PDF
+try:
+    from app.services.calJOBS_summary import generate_calJOBS_reference
+    calJOBS_pdf = generate_calJOBS_reference(participant)
+    if calJOBS_pdf:
+        calJOBS_filename = f"CalJOBS_Entry_Reference_{last_name}_{first_name}.pdf"
+        zf.writestr(f"staff_reference/{calJOBS_filename}", calJOBS_pdf)
+except Exception:
+    pass
 
     # Get bytes from buffer
     zip_buffer.seek(0)
